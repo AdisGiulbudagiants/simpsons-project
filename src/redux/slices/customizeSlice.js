@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { setError } from './errorSlice'
 import createQuote from '../../utils/createQuote'
 
 let initialState = {
@@ -14,7 +15,7 @@ export const fetchCustomQuotes = createAsyncThunk(
       const data = await axios.get(url)
       return data.data
     } catch (error) {
-      thunkAPI.dispatch(console.log(error.message))
+      thunkAPI.dispatch(setError(error.message))
       return thunkAPI.rejectWithValue(error)
     }
   }
@@ -29,6 +30,7 @@ const customizeSlice = createSlice({
       state.isLoadingViaAPI = true
     })
     builder.addCase(fetchCustomQuotes.fulfilled, (state, action) => {
+      state.isLoadingViaAPI = false
       state.quotes = action.payload.map((el) => createQuote(el))
     })
     builder.addCase(fetchCustomQuotes.rejected, (state) => {
