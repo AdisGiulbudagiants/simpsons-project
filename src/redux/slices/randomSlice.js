@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { setError } from './errorSlice'
 import createQuote from '../../utils/createQuote'
 
 export const fetchRandomQuote = createAsyncThunk(
@@ -9,7 +10,7 @@ export const fetchRandomQuote = createAsyncThunk(
       const data = await axios.get(url)
       return data.data
     } catch (error) {
-      thunkAPI.dispatch(console.log(error.message))
+      thunkAPI.dispatch(setError(error.message))
       return thunkAPI.rejectWithValue(error)
     }
   }

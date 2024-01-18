@@ -1,5 +1,6 @@
 import { FaSpinner } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
+import { setError } from '../redux/slices/errorSlice.js'
 import {
   fetchRandomQuote,
   selectQuote,
@@ -12,10 +13,12 @@ const RandomQuotes = () => {
   const dispatch = useDispatch()
 
   function handleAddRandomQuote() {
-    dispatch(fetchRandomQuote('https://thesimpsonsquoteapi.glitch.me/quotes'))
+    try {
+      dispatch(fetchRandomQuote('https://thesimpsonsquoteapi.glitch.me/quotes'))
+    } catch (error) {
+      dispatch(setError(error.message))
+    }
   }
-
-  console.log(isLoadingViaAPI)
 
   return (
     <div className="320px-639px:justify-start sm:h-[80vh]  flex flex-col sm:justify-center items-center">

@@ -4,6 +4,7 @@ import Main from './pages/Main.jsx'
 import RandomQuotes from './pages/RandomQuotes.jsx'
 import CustomizedQuotes from './pages/CustomizedQuotes.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Error from './components/Error/Error.jsx'
 import CloudsBg from './assets/cloudsBg.jpg'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+        <Error />
       </div>
     </BrowserRouter>
   )
