@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import randomReducer from './slices/RandomSlice'
-import customizeReducer from './slices/customizeSlice'
-import errorSlice from './slices/errorSlice'
+import randomReducer from './slices/randomSlice.js'
+import customizeReducer from './slices/customizeSlice.js'
+import errorSlice from './slices/errorSlice.js'
 
 const store = configureStore({
   reducer: {
