@@ -39,5 +39,6 @@ const randomSlice = createSlice({
 })
 
 export const selectQuote = (state) => state.random.quotes
+export const selectIsLoadingViaAPI = (state) => state.random.isLoadingViaAPI
 
 export default randomSlice.reducer

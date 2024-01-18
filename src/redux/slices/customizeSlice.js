@@ -38,5 +38,6 @@ const customizeSlice = createSlice({
 })
 
 export const selectCustom = (state) => state.custom.quotes
+export const selectIsLoadingViaAPI = (state) => state.custom.isLoadingViaAPI
 
 export default customizeSlice.reducer

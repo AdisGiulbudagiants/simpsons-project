@@ -23,6 +23,9 @@ export default {
         '320px': '320px',
         '639px': '639px',
       },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      },
     },
   },
   plugins: [],
