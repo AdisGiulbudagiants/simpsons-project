@@ -21,12 +21,12 @@ const RandomQuotes = () => {
   }
 
   return (
-    <div className="320px-639px:justify-start sm:h-[80vh]  flex flex-col sm:justify-center items-center">
+    <div className="320px-639px:justify-start flex flex-col sm:justify-center items-center">
       {quotes.length === 0 ? (
         ''
       ) : (
         <>
-          <div className="h-[500px] mb-2 flex items-center justify-center ">
+          <div className="h-[500px] mb-2 flex items-center justify-center">
             <img className="object-cover" src={quotes.map((el) => el.image)} alt="character" />
           </div>
           <div className="max-w-[80%] flex flex-col justify-center items-center">

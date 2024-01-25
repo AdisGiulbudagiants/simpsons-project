@@ -7,7 +7,7 @@ const Main = () => {
         The Simpsons Quotes Project
       </h1>
       <div className="mb-[2rem] mt-[1rem] mx-5 p-3 border rounded-md bg-pink">
-        <p className="320px-639px:text-[1rem] sm:text-[1.2rem]drop-shadow-lg text-center  text-white font-poppins">
+        <p className="320px-639px:text-[1rem] sm:text-[1.2rem]drop-shadow-lg text-center text-white font-poppins">
           <span className="320px-639px:text-[1.3rem] sm:text-[1.5rem] drop-shadow-lg  text-yellow">
             Hello!
           </span>{' '}

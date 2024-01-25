@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <div
-        className="w-[100svw] h-[100dvh] overflow-x-hidden bg-center bg-cover"
+        className="h-[100dvh] overflow-x-hidden bg-center bg-cover"
         style={{ backgroundImage: `url(${CloudsBg})` }}
       >
         <Routes>
