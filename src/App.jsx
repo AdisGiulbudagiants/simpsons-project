@@ -1,9 +1,10 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import { lazy } from 'react'
 import MainLayout from './layouts/MainLayout.jsx'
-import Main from './pages/Main.jsx'
-import RandomQuotes from './pages/RandomQuotes.jsx'
-import CustomizedQuotes from './pages/CustomizedQuotes.jsx'
-import NotFound from './pages/NotFound.jsx'
+const Main = lazy(() => import('./pages/Main.jsx'))
+const RandomQuotes = lazy(() => import('./pages/RandomQuotes.jsx'))
+const CustomizedQuotes = lazy(() => import('./pages/CustomizedQuotes.jsx'))
+const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 import Error from './components/Error/Error.jsx'
 import CloudsBg from './assets/cloudsBg.jpg'
 
