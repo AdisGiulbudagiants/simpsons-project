@@ -10,3 +10,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+::-webkit-scrollbar {
+  @apply bg-yellow w-[0.625rem];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-pink rounded-md;
+}
