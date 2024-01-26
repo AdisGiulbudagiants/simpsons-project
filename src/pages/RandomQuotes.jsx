@@ -27,7 +27,12 @@ const RandomQuotes = () => {
       ) : (
         <>
           <div className="h-[500px] mb-2 flex items-center justify-center">
-            <img className="object-cover" src={quotes.map((el) => el.image)} alt="character" />
+            <img
+              className="object-cover"
+              src={quotes.map((el) => el.image)}
+              alt="character"
+              loading="lazy"
+            />
           </div>
           <div className="max-w-[80%] flex flex-col justify-center items-center">
             <p className=" text-[1.4rem] bg-pink mb-[1rem] mx-5 p-3 border border-black rounded-md text-white text-pretty font-poppins text-center">
